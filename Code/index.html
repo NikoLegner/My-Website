@@ -7,88 +7,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <div class="container">
-    <!-- LEFT COLUMN -->
     <div class="left">
       <div class="logo-bar">
         <img src="Images/charitywater logo.png" alt="Charity: water logo" class="logo-img">
       </div>
       <h1>Make a Real Impact.<br><span class="highlight">Give Clean Water Today.</span></h1>
-      <p>
-        100% of your donation brings clean water to people who need it most.  
-        Track the exact projects you fund and join thousands of students solving the water crisis together.
-      </p>
+      <p>100% of your donation brings clean water to people who need it most. Track the exact projects you fund and join thousands of students solving the water crisis together.</p>
       <a href="#" class="btn">Donate Now</a>
     </div>
-
-    <!-- RIGHT COLUMN -->
     <div class="right">
       <img src="Images/charitywater.png" class="side-image" alt="Charity: water image">
     </div>
   </div>
-
   <style>
-    .container {
-      display: flex;
-      min-height: 100vh;
-      position: relative;
-      box-shadow: 0 0 40px rgba(0,0,0,0.04);
-    }
-    .right {
-      border-left: 2px solid #f7c200;
-    }
-    .side-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.95) contrast(1.05);
-      transition: filter 0.3s;
-    }
-    .side-image:hover {
-      filter: brightness(1) contrast(1.2);
-    }
-    .left {
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(247,194,0,0.08);
-      margin: 32px;
-    }
-    h1 {
-      font-family: Georgia, serif;
-      font-size: 2.6rem;
-      font-weight: bold;
-      color: #222;
-      margin-top: 80px;
-      margin-bottom: 24px;
-      line-height: 1.1;
-      letter-spacing: -1px;
-    }
-    p {
-      font-family: Arial, sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 32px;
-    }
-    .btn {
-      background: #0077c2;
-      color: #fff;
-      font-size: 1.2rem;
-      font-family: Georgia, serif;
-      font-weight: bold;
-      padding: 18px 40px;
-      border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 6px 24px rgba(0,119,194,0.15);
-      transition: background 0.2s, transform 0.2s;
-      align-self: flex-start;
-    }
-    .btn:hover {
-      background: #005fa3;
-      transform: scale(1.08);
-    }
+    body{margin:0;font-family:Arial,sans-serif;background:#fff;}
+    .container{display:flex;min-height:100vh;position:relative;box-shadow:0 0 40px rgba(0,0,0,0.04);}
+    .left{flex:1;background:linear-gradient(135deg,#f7c200 80%,#fffbe6 100%);box-shadow:0 8px 32px rgba(247,194,0,0.08);padding:48px 40px;}
+    .logo-bar{position:absolute;top:32px;left:40px;z-index:2;}
+    .logo-img{height:48px;transition:transform .3s cubic-bezier(.25,.8,.25,1);}
+    .logo-img:hover{transform:scale(1.08);}
+    h1{font-family:Georgia,serif;font-size:2.6rem;font-weight:bold;color:#222;margin-top:80px;margin-bottom:24px;line-height:1.1;letter-spacing:-1px;}
+    .highlight{color:#f7c200;background:#0077c2;padding:0 8px;border-radius:4px;font-family:Georgia,serif;font-size:2.6rem;font-weight:bold;box-shadow:0 2px 8px rgba(0,119,194,0.08);}
+    p{font-size:1.15rem;line-height:1.6;color:#333;margin-bottom:32px;}
+    .btn{background:#0077c2;color:#fff;font-size:1.2rem;font-family:Georgia,serif;font-weight:bold;padding:18px 40px;border:none;border-radius:30px;text-decoration:none;box-shadow:0 8px 32px rgba(0,119,194,0.18);transition:background .2s,transform .2s;align-self:flex-start;margin-top:16px;cursor:pointer;}
+    .btn:hover{background:#005fa3;transform:scale(1.08);}
+    .right{flex:1;position:relative;overflow:hidden;display:flex;align-items:stretch;justify-content:center;background:#fff;border-left:2px solid #f7c200;}
+    .side-image{width:100%;height:100%;object-fit:cover;filter:brightness(.95) contrast(1.05);transition:filter .3s;}
+    .side-image:hover{filter:brightness(1) contrast(1.2);}
+    @media(max-width:1200px){h1{font-size:2rem;margin-top:48px;}.logo-img{height:40px;}.btn{font-size:1rem;padding:14px 32px;}}
+    @media(max-width:900px){.container{flex-direction:column;}.left,.right{width:100%;min-height:240px;padding:24px 10px;}.logo-bar{position:static;margin-bottom:16px;left:unset;top:unset;}h1{margin-top:0;font-size:1.4rem;}.highlight{font-size:1.4rem;padding:0 4px;}.side-image{height:200px;}.btn{font-size:1rem;padding:10px 24px;}p{font-size:1rem;margin-bottom:20px;}}
+    @media(max-width:500px){.container{min-height:unset;}.logo-img{height:32px;}h1,.highlight{font-size:1rem;}.btn{font-size:.9rem;padding:8px 16px;}.side-image{height:120px;}.left,.right{padding:12px 4px;}}
   </style>
-
 </body>
 </html>
